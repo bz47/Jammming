@@ -6,7 +6,12 @@ function SearchResults(props) {
   return (
     <div id={styles.searchResults}>
       <h3>Results</h3>
-      <Tracklist tracks={props.searchResults} onAdd={props.onAdd} />
+      <Tracklist
+        tracks={props.searchResults}
+        onAdd={props.onAdd}
+        onRemove={props.onRemove}
+        string="search"
+      />
     </div>
   );
 }

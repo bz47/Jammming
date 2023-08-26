@@ -4,33 +4,42 @@ import SearchResults from "./SearchResults";
 import Playlist from "./Playlist";
 import styles from "../Styles/App.module.css";
 
+const generateKey = () => {
+  let num = "";
+  let characters =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  const chars = characters.length;
+
+  for (let i = 0; i < 5; i++) {
+    num += characters.charAt(Math.floor(Math.random() * chars));
+  }
+
+  return num;
+};
+
 function App() {
-  const [playlistTracks, setPlaylistTracks] = useState([
-    {
-      song: "Go Baby",
-      artist: "Lupe",
-      album: "Food and Liqour",
-      id: 1,
-    },
-  ]);
+  const [playlistTracks, setPlaylistTracks] = useState([]);
   const [searchResults, setSearchResults] = useState([
     {
       song: "Go Baby",
       artist: "Lupe",
       album: "Food and Liqour",
-      id: 1,
+      id: generateKey(),
     },
     {
       song: "Demon Days",
       artist: "Gorillaz",
       album: "Self titled",
-      id: 2,
+      id: generateKey(),
     },
   ]);
 
   const onAdd = (track) => {
     setPlaylistTracks((prevTracks) => [...prevTracks, track]);
-    console.log(`track is ${track}`);
+  };
+
+  const onRemove = (e) => {
+    setPlaylistTracks((tracks) => tracks.filter((song) => song.id !== e.id));
   };
 
   return (
@@ -41,7 +50,11 @@ function App() {
       <SearchBar />
       <main>
         <SearchResults searchResults={searchResults} onAdd={onAdd} />
-        <Playlist playlistTracks={playlistTracks} />
+        <Playlist
+          playlistTracks={playlistTracks}
+          name="playlist"
+          onRemove={onRemove}
+        />
       </main>
     </div>
   );

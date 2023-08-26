@@ -1,14 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../Styles/Playlist.module.css";
 import Tracklist from "./Tracklist";
 
 function Playlist(props) {
-  console.log(props.playlistTracks);
+  const { playlistTracks } = props;
+  const [name, setName] = useState("Playlist");
+
+  const nameList = (e) => {
+    e.preventDefault();
+    setName(e.target.value);
+  };
+
   return (
     <div id={styles.playlist}>
-      <h3>Playlist</h3>
-      <input type="text" />
-      <Tracklist tracks={props.playlistTracks} />
+      <h3>{name}</h3>
+      <input onChange={nameList} type="text" />
+      <Tracklist
+        tracks={playlistTracks}
+        string="playlist"
+        onRemove={props.onRemove}
+      />
       <button>Save to Spotify</button>
     </div>
   );

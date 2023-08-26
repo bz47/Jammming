@@ -2,8 +2,20 @@ import React, { useCallback } from "react";
 import styles from "../Styles/Track.module.css";
 
 function Track(props) {
+  const string = props.string;
+
   const choice = () => {
-    return <button onClick={props.onAdd}>+</button>;
+    switch (string) {
+      case "search": {
+        return <button onClick={() => props.onAdd(props.track)}>+</button>;
+      }
+      case "playlist": {
+        return <button onClick={() => props.onRemove(props.track)}>-</button>;
+      }
+      default: {
+        return undefined;
+      }
+    }
   };
 
   return (
