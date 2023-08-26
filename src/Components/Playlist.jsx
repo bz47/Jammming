@@ -13,8 +13,13 @@ function Playlist(props) {
 
   return (
     <div id={styles.playlist}>
-      <h3>{name}</h3>
-      <input onChange={nameList} type="text" />
+      <h3>{name == "" ? "Playlist" : name}</h3>
+      <input
+        onChange={nameList}
+        type="text"
+        id="playlistName"
+        placeholder="Rename Playlist..."
+      />
       <Tracklist
         tracks={playlistTracks}
         string="playlist"

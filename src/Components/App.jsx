@@ -42,19 +42,29 @@ function App() {
     setPlaylistTracks((tracks) => tracks.filter((song) => song.id !== e.id));
   };
 
+  /*
+  const onSearch = e => {
+    setSearchTerm(e.target.value);
+  }
+  */
+
   return (
     <div id={styles.app}>
       <header>
         <h1>Spotify Playlist App</h1>
+        <SearchBar setSearchResults={setSearchResults} />
       </header>
-      <SearchBar />
       <main>
-        <SearchResults searchResults={searchResults} onAdd={onAdd} />
-        <Playlist
-          playlistTracks={playlistTracks}
-          name="playlist"
-          onRemove={onRemove}
-        />
+        <section>
+          <SearchResults searchResults={searchResults} onAdd={onAdd} />
+        </section>
+        <section>
+          <Playlist
+            playlistTracks={playlistTracks}
+            name="playlist"
+            onRemove={onRemove}
+          />
+        </section>
       </main>
     </div>
   );

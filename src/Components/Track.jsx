@@ -7,10 +7,24 @@ function Track(props) {
   const choice = () => {
     switch (string) {
       case "search": {
-        return <button onClick={() => props.onAdd(props.track)}>+</button>;
+        return (
+          <button
+            style={{ width: "fit-content", padding: ".7em" }}
+            onClick={() => props.onAdd(props.track)}
+          >
+            +
+          </button>
+        );
       }
       case "playlist": {
-        return <button onClick={() => props.onRemove(props.track)}>-</button>;
+        return (
+          <button
+            style={{ width: "fit-content", padding: ".7em" }}
+            onClick={() => props.onRemove(props.track)}
+          >
+            -
+          </button>
+        );
       }
       default: {
         return undefined;
