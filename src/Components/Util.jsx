@@ -1,5 +1,5 @@
 const clientId = "80b192150ff34b27994142114b6451b0";
-const redirectUri = `http://localhost:5173/callback`;
+const redirectUri = "https://bz-spotify.netlify.app";
 let accessToken;
 
 export const Spotify = {
