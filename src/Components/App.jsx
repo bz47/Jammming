@@ -3,6 +3,7 @@ import SearchBar from "./SearchBar";
 import SearchResults from "./SearchResults";
 import Playlist from "./Playlist";
 import styles from "../Styles/App.module.css";
+import Spotify from "./Util";
 
 const generateKey = () => {
   let num = "";
@@ -42,17 +43,13 @@ function App() {
     setPlaylistTracks((tracks) => tracks.filter((song) => song.id !== e.id));
   };
 
-  /*
-  const onSearch = e => {
-    setSearchTerm(e.target.value);
-  }
-  */
+  const search = (term) => Spotify.search(term);
 
   return (
     <div id={styles.app}>
       <header>
         <h1>Spotify Playlist App</h1>
-        <SearchBar setSearchResults={setSearchResults} />
+        <SearchBar search={search} setSearchResults={setSearchResults} />
       </header>
       <main>
         <section>

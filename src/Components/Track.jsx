@@ -35,7 +35,7 @@ function Track(props) {
   return (
     <div id={styles.track}>
       <div id={styles.track_info}>
-        <h4>{props.track.song}</h4>
+        <h4>{props.track.name}</h4>
         <p>
           {props.track.artist} | {props.track.album}
         </p>

@@ -1,11 +1,17 @@
 import React, { useState } from "react";
 import styles from "../Styles/SearchBar.module.css";
 
-function SearchBar({ setSearchResults }) {
+function SearchBar({ search, setSearchResults }) {
   const [searchTerm, setSearchTerm] = useState("");
   const handleChange = (e) => {
     setSearchTerm(e.target.value);
   };
+
+  const findResults = (searchTerm) => {
+    search(searchTerm.value).then((response) => setSearchResults(response));
+  };
+
+  console.log(searchTerm);
 
   return (
     <div id="searchBar">
@@ -15,7 +21,7 @@ function SearchBar({ setSearchResults }) {
         placeholder="Find a Song..."
         onChange={handleChange}
       />
-      <button type="submit" className={styles.searchButton}>
+      <button onClick={findResults} className={styles.searchButton}>
         Search
       </button>
     </div>
