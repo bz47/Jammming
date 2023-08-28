@@ -7,8 +7,10 @@ function SearchBar({ search, setSearchResults }) {
     setSearchTerm(e.target.value);
   };
 
-  const findResults = (searchTerm) => {
-    search(searchTerm.value).then((response) => setSearchResults(response));
+  const findResults = () => {
+    if (searchTerm !== "") {
+      search(searchTerm).then((response) => setSearchResults(response));
+    }
   };
 
   console.log(searchTerm);

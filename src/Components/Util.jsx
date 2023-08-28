@@ -3,6 +3,7 @@ const redirectUri = "http://localhost:5173/callback";
 let accessToken;
 
 export const Spotify = {
+  //this getAccessToken method was written by a friend :)
   getAccessToken() {
     if (accessToken) {
       return accessToken;

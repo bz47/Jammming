@@ -27,7 +27,9 @@ function Playlist(props) {
         string="playlist"
         onRemove={props.onRemove}
       />
-      <button>Save to Spotify</button>
+      <button onClick={() => props.onSave(name, playlistTracks.trackUris)}>
+        Save to Spotify
+      </button>
     </div>
   );
 }

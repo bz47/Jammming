@@ -44,6 +44,7 @@ function App() {
   };
 
   const search = (term) => Spotify.search(term);
+  const save = () => Spotify.savePlaylist();
 
   return (
     <div id={styles.app}>
@@ -60,6 +61,7 @@ function App() {
             playlistTracks={playlistTracks}
             name="playlist"
             onRemove={onRemove}
+            onSave={save}
           />
         </section>
       </main>
