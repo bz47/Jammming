@@ -33,6 +33,14 @@ function App() {
   const search = (term) => Spotify.search(term);
   const save = (name, uris) => Spotify.savePlaylist(name, uris);
 
+  const componentDidMount = () => {
+    window.addEventListener("load", () => {
+      Spotify.getAccessToken();
+    });
+  };
+
+  componentDidMount();
+
   return (
     <div id={styles.app}>
       <header>
