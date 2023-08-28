@@ -20,20 +20,7 @@ const generateKey = () => {
 
 function App() {
   const [playlistTracks, setPlaylistTracks] = useState([]);
-  const [searchResults, setSearchResults] = useState([
-    {
-      song: "Go Baby",
-      artist: "Lupe",
-      album: "Food and Liqour",
-      id: generateKey(),
-    },
-    {
-      song: "Demon Days",
-      artist: "Gorillaz",
-      album: "Self titled",
-      id: generateKey(),
-    },
-  ]);
+  const [searchResults, setSearchResults] = useState([]);
 
   const onAdd = (track) => {
     setPlaylistTracks((prevTracks) => [...prevTracks, track]);
@@ -44,7 +31,7 @@ function App() {
   };
 
   const search = (term) => Spotify.search(term);
-  const save = () => Spotify.savePlaylist();
+  const save = (name, uris) => Spotify.savePlaylist(name, uris);
 
   return (
     <div id={styles.app}>
@@ -58,6 +45,7 @@ function App() {
         </section>
         <section>
           <Playlist
+            setPlaylistTracks={setPlaylistTracks}
             playlistTracks={playlistTracks}
             name="playlist"
             onRemove={onRemove}

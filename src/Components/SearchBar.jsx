@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import styles from "../Styles/SearchBar.module.css";
 
+let uriArray = [];
+
 function SearchBar({ search, setSearchResults }) {
   const [searchTerm, setSearchTerm] = useState("");
   const handleChange = (e) => {
@@ -12,8 +14,6 @@ function SearchBar({ search, setSearchResults }) {
       search(searchTerm).then((response) => setSearchResults(response));
     }
   };
-
-  console.log(searchTerm);
 
   return (
     <div id="searchBar">
