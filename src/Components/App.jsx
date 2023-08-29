@@ -5,19 +5,6 @@ import Playlist from "./Playlist";
 import styles from "../Styles/App.module.css";
 import Spotify from "./Util";
 
-const generateKey = () => {
-  let num = "";
-  let characters =
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-  const chars = characters.length;
-
-  for (let i = 0; i < 5; i++) {
-    num += characters.charAt(Math.floor(Math.random() * chars));
-  }
-
-  return num;
-};
-
 function App() {
   const [playlistTracks, setPlaylistTracks] = useState([]);
   const [searchResults, setSearchResults] = useState([]);
@@ -49,7 +36,11 @@ function App() {
       </header>
       <main>
         <section>
-          <SearchResults searchResults={searchResults} onAdd={onAdd} />
+          <SearchResults
+            searchResults={searchResults}
+            setSearchResults={setSearchResults}
+            onAdd={onAdd}
+          />
         </section>
         <section>
           <Playlist
