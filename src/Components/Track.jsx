@@ -9,7 +9,12 @@ function Track(props) {
       case "search": {
         return (
           <button
-            style={{ width: "fit-content", padding: ".7em" }}
+            style={{
+              width: "fit-content",
+              padding: ".7em",
+              backgroundColor: "black",
+              color: "white",
+            }}
             onClick={() => props.onAdd(props.track)}
           >
             +
@@ -19,7 +24,12 @@ function Track(props) {
       case "playlist": {
         return (
           <button
-            style={{ width: "fit-content", padding: ".7em" }}
+            style={{
+              width: "fit-content",
+              padding: ".7em",
+              backgroundColor: "black",
+              color: "white",
+            }}
             onClick={() => props.onRemove(props.track)}
           >
             -
