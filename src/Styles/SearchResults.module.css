@@ -5,5 +5,7 @@
   max-height: 80vh;
   overflow: scroll;
   padding-inline: 1em;
+  background-color: black;
+  color: silver;
   border: solid black 2px;
 }
