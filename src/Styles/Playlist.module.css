@@ -2,6 +2,7 @@
   min-width: 30vw;
   max-width: 500px;
   min-height: 400px;
+  padding-inline: 1em;
   border: solid black 1px;
 }
 
@@ -15,6 +16,7 @@ button {
   width: 30%;
   padding: 0.2em;
   margin-bottom: 1em;
+  font-weight: 700;
   background-color: silver;
   border-radius: 50px;
   filter: brightness(2);
