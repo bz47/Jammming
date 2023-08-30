@@ -5,6 +5,7 @@
   padding: 1em;
   margin-block: 0.5em;
   background-color: rgba(244, 236, 236, 0.865);
+  color: black !important;
 }
 
 #track_info {

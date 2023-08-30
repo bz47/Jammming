@@ -5,9 +5,11 @@
   max-height: 80vh;
   overflow: scroll;
   padding-inline: 1em;
-  background-color: black;
+  background-color: rgb(0, 0, 0, 0.5);
   color: silver;
-  border: solid black 2px;
+  letter-spacing: 0.2em;
+  border: solid black 1px;
+  border-radius: 30px;
 }
 
 input {
