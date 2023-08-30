@@ -6,6 +6,11 @@
   text-align: center;
 }
 
+#jammming {
+  letter-spacing: 0.2em;
+  font-style: italic;
+}
+
 main {
   margin-top: 1em;
   display: flex;

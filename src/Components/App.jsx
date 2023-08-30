@@ -31,7 +31,7 @@ function App() {
   return (
     <div id={styles.app}>
       <header>
-        <h1>Spotify Playlist App</h1>
+        <h1 id={styles.jammming}>Jammming</h1>
         <SearchBar search={search} setSearchResults={setSearchResults} />
       </header>
       <main>
