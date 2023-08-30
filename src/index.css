@@ -1,3 +1,4 @@
-* {
-  box-sizing: border-box;
+body {
+  min-height: 100vh;
+  background: linear-gradient(rgb(107, 16, 107), rgba(50, 50, 232, 0.563));
 }

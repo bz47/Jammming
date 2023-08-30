@@ -2,15 +2,38 @@
   min-width: 30vw;
   max-width: 500px;
   min-height: 400px;
-  border: solid green 2px;
+  border: solid black 1px;
 }
 
 input {
   margin-bottom: 1em;
   margin-left: 1em;
+  cursor: pointer;
 }
 
 button {
   width: 30%;
+  padding: 0.2em;
   margin-bottom: 1em;
+  background-color: silver;
+  border-radius: 50px;
+  filter: brightness(2);
+  border: none;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: rgb(192, 192, 192, 0.8);
+}
+
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+  input {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 1em;
+  }
+
+  button {
+    width: 60%;
+  }
 }
