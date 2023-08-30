@@ -1,4 +1,7 @@
 body {
   min-height: 100vh;
-  background: linear-gradient(rgb(107, 16, 107), rgba(50, 50, 232, 0.563));
+  background-image: url(../background_photo_desktop.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
