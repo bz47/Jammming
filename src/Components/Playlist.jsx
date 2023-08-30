@@ -28,7 +28,7 @@ function Playlist(props) {
 
   return (
     <div id={styles.playlist}>
-      <h3>{name == "" ? "Playlist" : name}</h3>
+      <h2>{name == "" ? "Playlist" : name}</h2>
       <form action="">
         <input
           onChange={nameList}

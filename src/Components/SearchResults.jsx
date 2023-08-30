@@ -5,7 +5,7 @@ import Tracklist from "./Tracklist";
 function SearchResults(props) {
   return (
     <div id={styles.searchResults}>
-      <h3>Search Results</h3>
+      <h2>Search Results</h2>
       <Tracklist
         tracks={props.searchResults}
         onAdd={props.onAdd}
