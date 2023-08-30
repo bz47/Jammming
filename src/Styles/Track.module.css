@@ -4,7 +4,7 @@
   border: solid black 1px;
   padding: 1em;
   margin-block: 0.5em;
-  background-color: rgb(233, 224, 224);
+  background-color: rgb(233, 224, 224, 0.7);
 }
 
 #track_info {
