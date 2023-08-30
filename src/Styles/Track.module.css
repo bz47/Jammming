@@ -1,10 +1,10 @@
 #track {
   display: flex;
   align-items: center;
-  border: solid black 1px;
+  border-radius: 30px;
   padding: 1em;
   margin-block: 0.5em;
-  background-color: rgb(233, 224, 224, 0.7);
+  background-color: rgba(240, 235, 235, 0.7);
 }
 
 #track_info {

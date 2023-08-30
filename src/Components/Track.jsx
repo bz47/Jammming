@@ -13,7 +13,7 @@ function Track(props) {
               width: "fit-content",
               padding: ".7em",
               backgroundColor: "black",
-              color: "white",
+              color: "rgb(29, 28, 28, .8)",
             }}
             onClick={() => props.onAdd(props.track)}
           >
@@ -27,7 +27,7 @@ function Track(props) {
             style={{
               width: "fit-content",
               padding: ".7em",
-              backgroundColor: "black",
+              backgroundColor: "rgb(29, 28, 28, .8)",
               color: "white",
             }}
             onClick={() => props.onRemove(props.track)}
