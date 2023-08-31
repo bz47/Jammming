@@ -12,3 +12,17 @@
   width: 80%;
   margin-right: 5%;
 }
+
+@media only screen and (min-width: 300px) and (max-width: 500px) {
+  #track {
+    width: 80%;
+  }
+
+  #track p {
+    letter-spacing: normal !important;
+  }
+
+  #track_info {
+    width: 50%;
+  }
+}
