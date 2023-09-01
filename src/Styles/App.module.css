@@ -16,9 +16,15 @@
 main {
   margin-top: 1em;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 header {
   width: 100%;
+}
+
+@media only screen and (min-width: 500px) and (max-width: 800px) {
+  section {
+    width: 50%;
+  }
 }

@@ -42,7 +42,9 @@ function Playlist(props) {
         string="playlist"
         onRemove={props.onRemove}
       />
-      <button onClick={log}>Save to Spotify</button>
+      <button id={styles.save} onClick={log}>
+        Save to Spotify
+      </button>
     </div>
   );
 }
