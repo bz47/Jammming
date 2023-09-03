@@ -29,7 +29,7 @@ function App() {
   componentDidMount();
 
   return (
-    <div id={styles.app}>
+    <div id={styles.app} style={{ backgroundImage: "background.jpg" }}>
       <header>
         <h1 id={styles.jammming}>Jammming</h1>
         <SearchBar search={search} setSearchResults={setSearchResults} />
