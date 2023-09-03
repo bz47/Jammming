@@ -13,8 +13,7 @@
 }
 
 input {
-  margin-bottom: 1em;
-  margin-left: 1em;
+  margin: 0 auto;
   cursor: pointer;
 }
 
@@ -22,7 +21,7 @@ button {
   width: 30%;
   padding: 0.2em;
   padding-block: 0.3em;
-  margin-bottom: 1em;
+  margin-block: 1em;
   font-weight: 700;
   background-color: silver;
   border-radius: 50px;
@@ -41,7 +40,7 @@ button:hover {
   }
 
   input {
-    margin: 0 auto;
+    width: 90%;
   }
 
   #save {
