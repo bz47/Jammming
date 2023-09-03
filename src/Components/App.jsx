@@ -4,6 +4,7 @@ import SearchResults from "./SearchResults";
 import Playlist from "./Playlist";
 import styles from "../Styles/App.module.css";
 import Spotify from "./Util";
+import background from "../Styles/background.jpg";
 
 function App() {
   const [playlistTracks, setPlaylistTracks] = useState([]);
@@ -29,7 +30,7 @@ function App() {
   componentDidMount();
 
   return (
-    <div id={styles.app} style={{ backgroundImage: "background.jpg" }}>
+    <div id={styles.app} style={{}}>
       <header>
         <h1 id={styles.jammming}>Jammming</h1>
         <SearchBar search={search} setSearchResults={setSearchResults} />
